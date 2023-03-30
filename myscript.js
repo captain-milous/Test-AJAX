@@ -26,14 +26,20 @@ $(document).ready(function() {
 
 	$('#btn-liked').click(function(e) {
 		Hide();
-		
+		for(let i = 0; i < liked.length; i++){
+			var output = "<li>" + liked[i] + "</li>";
+			$("#liked-jokes").prepend(output);
+		}
 		$("#myLiked").show();
 		console.log(liked);
 	});
 
 	$('#btn-disliked').click(function(e) {
 		Hide();
-
+		for(var i = 0; i < disliked.length; i++){
+			var output = "<li>" + disliked[i] + "</li>";
+			$("#disliked-jokes").prepend(output);
+		}
 		$("#myDisliked").show();
 		console.log(disliked);
 	});
